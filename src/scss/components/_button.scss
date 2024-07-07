@@ -1,0 +1,28 @@
+.btn {
+  padding: px-to-rem(10px) px-to-rem(20px);
+  text-decoration: none;
+  border-radius: 5px;
+  background: get-linear-gradient(
+    to right,
+    $ms-color-primary-40,
+    $ms-color-primary-80
+  );
+  color: $ms-color-text;
+  border: 1px solid $ms-color-border-primary-60;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-size: px-to-rem(18px);
+  margin: px-to-rem(24px) 0;
+  display: flex;
+  max-width: fit-content;
+
+  &:hover,
+  &:focus {
+    color: $ms-color-text;
+    background: get-linear-gradient(
+      to right,
+      $ms-color-primary-100,
+      $ms-color-primary-80
+    );
+  }
+}

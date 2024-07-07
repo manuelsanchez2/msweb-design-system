@@ -1,0 +1,34 @@
+// Create a linear gradient
+@function get-linear-gradient($direction, $color1, $color2) {
+  @return linear-gradient($direction, $color1, $color2);
+}
+
+// Convert rgba to hlsl
+@function rgba-to-hlsl($color) {
+  @return hsla(
+    hue($color),
+    saturation($color),
+    lightness($color),
+    alpha($color)
+  );
+}
+
+// Convert hexa with 5 digits to hlsl
+@function hexa-to-hsl($color) {
+  @return hsl(hue($color), saturation($color), lightness($color));
+}
+
+// Convert pixels to rems
+@function px-to-rem($px, $base: 16px) {
+  @return calc($px / $base) * 1rem;
+}
+
+// Convert pixels to ems
+@function px-to-em($px, $base: 16px) {
+  @return calc($px / $base) * 1em;
+}
+
+// Make number negative
+@function negative($number) {
+  @return $number * -1;
+}

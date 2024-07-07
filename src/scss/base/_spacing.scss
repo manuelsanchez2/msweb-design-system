@@ -1,0 +1,37 @@
+:root {
+  --ms-spacing-xxs: 0.25rem;
+  --ms-spacing-xs: 0.5rem;
+  --ms-spacing-sm: 1rem;
+  --ms-spacing-md: 1.5rem;
+  --ms-spacing-lg: 2rem;
+  --ms-spacing-xl: 3rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --ms-spacing-xxs: 0.5rem;
+    --ms-spacing-xs: 1rem;
+    --ms-spacing-sm: 1.5rem;
+    --ms-spacing-md: 2rem;
+    --ms-spacing-lg: 3rem;
+    --ms-spacing-xl: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --ms-spacing-xxs: 0.75rem;
+    --ms-spacing-xs: 1.5rem;
+    --ms-spacing-sm: 2rem;
+    --ms-spacing-md: 2.5rem;
+    --ms-spacing-lg: 3.5rem;
+    --ms-spacing-xl: 5rem;
+  }
+}
+
+$ms-spacing-xxs: var(--ms-spacing-xxs);
+$ms-spacing-xs: var(--ms-spacing-xs);
+$ms-spacing-sm: var(--ms-spacing-sm);
+$ms-spacing-md: var(--ms-spacing-md);
+$ms-spacing-lg: var(--ms-spacing-lg);
+$ms-spacing-xl: var(--ms-spacing-xl);

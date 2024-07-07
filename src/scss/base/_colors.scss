@@ -1,0 +1,32 @@
+:root {
+  --ms-color-text: #333;
+  --ms-color-background: #fff;
+
+  --ms-color-primary-100: rgba(241, 245, 248, 1);
+  --ms-color-primary-80: rgba(241, 245, 248, 0.8);
+  --ms-color-primary-60: rgba(241, 245, 248, 0.6);
+  --ms-color-primary-40: rgba(241, 245, 248, 0.4);
+
+  --ms-color-border-primary-100: #7a8791;
+  --ms-color-border-primary-80: #a3a3a3;
+  --ms-color-border-primary-60: #c7c7c7;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --ms-color-text: #fff;
+//     --ms-color-background: #333;
+//   }
+// }
+
+$ms-color-text: var(--ms-color-text);
+$ms-color-background: var(--ms-color-background);
+
+$ms-color-primary-100: rgba-to-hlsl(rgba(241, 245, 248, 1));
+$ms-color-primary-80: rgba-to-hlsl(rgba(241, 245, 248, 0.8));
+$ms-color-primary-60: rgba-to-hlsl(rgba(241, 245, 248, 0.6));
+$ms-color-primary-40: rgba-to-hlsl(rgba(241, 245, 248, 0.4));
+
+$ms-color-border-primary-100: hexa-to-hsl(#7a8791);
+$ms-color-border-primary-80: hexa-to-hsl(#a3a3a3);
+$ms-color-border-primary-60: hexa-to-hsl(#c7c7c7);

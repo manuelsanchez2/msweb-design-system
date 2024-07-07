@@ -1,0 +1,8 @@
+.footer {
+  background-color: $ms-color-primary-100;
+  padding: px-to-rem(20px);
+  border-top: 1px solid $ms-color-border-primary-100;
+  border-bottom: 1px solid $ms-color-border-primary-100;
+  display: flex;
+  justify-content: center;
+}

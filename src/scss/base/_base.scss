@@ -1,0 +1,51 @@
+// reset margin and padding
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $ms-color-background;
+  color: $ms-color-text;
+
+  font-family: $ms-font-family;
+
+  --shadow-block-shadow-color: rgba(61, 72, 82, 0.749);
+  background-image: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 9px,
+      $ms-color-primary-80 10px,
+      $ms-color-primary-80 9px
+    ),
+    repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 9px,
+      $ms-color-primary-80 9px,
+      $ms-color-primary-80 10px
+    );
+}
+
+p {
+  font-size: px-to-rem(16px);
+  margin: 0 0 px-to-rem(20px) 0;
+}
+
+a {
+  font-size: px-to-rem(16px);
+  text-decoration: none;
+  color: $ms-color-primary-100;
+}
+
+a:hover,
+a:focus {
+  color: $ms-color-primary-80;
+}
+
+small {
+  font-size: px-to-rem(14px);
+}
