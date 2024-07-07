@@ -30,20 +30,32 @@ body {
     );
 }
 
+[data-theme='dark'] {
+  background-image: none;
+}
+
 p {
-  font-size: px-to-rem(16px);
+  font-size: px-to-rem(18px);
   margin: 0 0 px-to-rem(20px) 0;
 }
 
 a {
   font-size: px-to-rem(16px);
-  text-decoration: none;
-  color: $ms-color-primary-100;
+  color: $ms-color-text;
 }
 
 a:hover,
 a:focus {
+  color: rgba-to-hlsl(rgba(0, 0, 0, 0.8));
+}
+
+[data-theme='dark'] a {
   color: $ms-color-primary-80;
+}
+
+[data-theme='dark'] a:hover,
+[data-theme='dark'] a:focus {
+  color: $ms-color-primary-60;
 }
 
 small {

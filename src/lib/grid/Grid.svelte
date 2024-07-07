@@ -1,11 +1,6 @@
 <script>
   export let name
   export let elements
-  import '../../scss/base/_functions.scss'
-
-  //   let showGreeting = false
-
-  //   const handleClick = () => (showGreeting = true)
 </script>
 
 <section data-testid="grid" aria-label="Grid with elements">
@@ -22,7 +17,7 @@
 
 <style scoped lang="scss">
   section {
-    margin-top: var(--ms-spacing-lg);
+    margin-top: var(--ms-spacing-md);
     text-align: center;
   }
 
@@ -36,7 +31,7 @@
 
   .grid__inner li {
     padding: 1rem;
-    // border: 1px solid var(--ms-color-border-primary-60);
+    border: 1px solid var(--ms-color-border-primary-60);
     background-color: var(--ms-color-primary-60);
     border-radius: 5px;
   }

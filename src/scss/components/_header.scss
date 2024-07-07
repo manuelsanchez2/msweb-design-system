@@ -1,7 +1,11 @@
 .header {
   background-color: $ms-color-primary-100;
   padding: px-to-rem(50px) px-to-rem(20px);
-  border-bottom: 1px solid $ms-color-border-primary-100;
+  border-bottom: 1px solid $ms-color-border-primary-60;
   display: flex;
   justify-content: center;
+}
+
+[data-theme='dark'] .header {
+  background-color: $ms-color-background;
 }

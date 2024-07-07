@@ -12,12 +12,17 @@
   --ms-color-border-primary-60: #c7c7c7;
 }
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --ms-color-text: #fff;
-//     --ms-color-background: #333;
-//   }
-// }
+[data-theme='dark'] {
+  --ms-color-text: #fff;
+  --ms-color-background: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ms-color-text: #fff;
+    --ms-color-background: #333;
+  }
+}
 
 $ms-color-text: var(--ms-color-text);
 $ms-color-background: var(--ms-color-background);
