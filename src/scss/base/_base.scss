@@ -8,7 +8,6 @@
 }
 
 body {
-  background-color: $ms-color-background;
   color: $ms-color-text;
 
   font-family: $ms-font-family;
@@ -31,6 +30,7 @@ body {
 }
 
 [data-theme='dark'] {
+  background-color: $ms-color-background;
   background-image: none;
 }
 

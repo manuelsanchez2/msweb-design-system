@@ -17,13 +17,6 @@
   --ms-color-background: #333;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ms-color-text: #fff;
-    --ms-color-background: #333;
-  }
-}
-
 $ms-color-text: var(--ms-color-text);
 $ms-color-background: var(--ms-color-background);
 
