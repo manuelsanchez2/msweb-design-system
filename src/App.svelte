@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Counter from './lib/Counter.svelte'
+  import { CUSTOM_EVENTS, type KEY_OF_CUSTOM_EVENTS } from './constants'
   import Grid from './lib/grid/Grid.svelte'
 
   import './lib/input-switcher/InputSwitcher.svelte'
@@ -8,7 +8,9 @@
   let currentYear = new Date().getFullYear()
 
   // receive event from input-switcher
-  function handleThemeChange(event: Event & { detail: boolean }) {
+  function handleThemeChange(
+    event: KEY_OF_CUSTOM_EVENTS & { detail: boolean }
+  ) {
     if (event.detail) {
       document.body.setAttribute('data-theme', 'light')
       localStorage.setItem('theme', 'light')
@@ -19,7 +21,7 @@
   }
 
   // listen to event from input-switcher
-  window.addEventListener('theme-change' as any, handleThemeChange)
+  window.addEventListener(CUSTOM_EVENTS.THEME_CHANGE as any, handleThemeChange)
   document.body.setAttribute(
     'data-theme',
     localStorage.getItem('theme') || 'dark'
@@ -27,23 +29,23 @@
 </script>
 
 <header class="header">
-  <div class="header__switch">
-    <input-switcher
-      name="Theme-Switcher"
-      nameOn="Light"
-      nameOff="Dark"
-      ariaLabelOn="Switch to light theme"
-      ariaLabelOff="Switch to dark theme"
-      eventToSend="theme-change"
-      initialState={localStorage.getItem('theme') === 'light'}
-    >
-    </input-switcher>
-  </div>
-
   <h1>Design System msweb</h1>
 </header>
 <main>
   <div class="container">
+    <div class="main__switch">
+      <input-switcher
+        name="Theme-Switcher"
+        nameOn="Light"
+        nameOff="Dark"
+        ariaLabelOn="Switch to light theme"
+        ariaLabelOff="Switch to dark theme"
+        eventToSend={CUSTOM_EVENTS.THEME_CHANGE}
+        initialState={localStorage.getItem('theme') === 'light'}
+      >
+      </input-switcher>
+    </div>
+
     <Tab>
       <h2>Introduction</h2>
     </Tab>
@@ -70,7 +72,8 @@
       <strong>vitest</strong> for testing. With Svelte it is pretty easy to
       create components and also <strong>web components</strong>. This page and
       its layout are heavily inspired by the amazing work of
-      <a target="_blank" href="https://component.gallery/">Component Gallery</a>
+      <a target="_blank" href="https://component.gallery/">Component Gallery</a
+      >.
     </p>
 
     <Grid
@@ -91,6 +94,16 @@
       ]}
     />
 
+    <div style="margin-top: 2rem;"></div>
+    <Tab>
+      <h2>Contact</h2>
+    </Tab>
+
+    <p>
+      If you have any questions or suggestions, feel free to contact me
+      <a href="mailto:manusansan22@gmail.com">here</a>.
+    </p>
+
     <!-- <a class="btn" href="https://www.google.de"> Click me I am a button</a> -->
   </div>
 </main>
@@ -102,10 +115,10 @@
   .header {
     position: relative;
   }
-  .header__switch {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+  .main__switch {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
   }
 
   .header h1 {

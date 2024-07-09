@@ -18,10 +18,12 @@
 >
   <div style="display: flex; align-items: center;">
     <input
+      role="switch"
       aria-label={state ? ariaLabelOff : ariaLabelOn}
       class="switch square"
       id={name}
       checked={state}
+      aria-checked={state}
       {name}
       on:change={() => {
         state = !state
